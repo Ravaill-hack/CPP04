@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 15:48:54 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/14 11:20:31 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:44:42 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Dog & Dog::operator=(const Dog & other)
 	if (this != &other)
 	{
 		this->_type = other._type;
-		this->_Brain = other._Brain;
+		*(this->_Brain) = *(other._Brain);
 	}
 	return (*this);
 }
