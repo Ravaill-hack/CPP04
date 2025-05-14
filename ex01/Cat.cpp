@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 15:48:41 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/14 10:48:20 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:20:39 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cat::Cat() : Animal("Cat"), _type("Cat")
 Cat::~Cat()
 {
 	std::cout << "Cat destructor called" << std::endl;
-	delete[] _Brain;
+	delete _Brain;
 }
 
 Cat::Cat(const Cat & toCopy) : Animal(toCopy)

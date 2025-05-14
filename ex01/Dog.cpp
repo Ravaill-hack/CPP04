@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 15:48:54 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/14 10:49:55 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:20:31 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Dog::Dog() : Animal("Dog"), _type("Dog")
 Dog::~Dog()
 {
 	std::cout << "Dog destructor called" << std::endl;
-	delete[] _Brain;	
+	delete _Brain;	
 }
 
 Dog::Dog(const Dog & toCopy) : Animal(toCopy)
