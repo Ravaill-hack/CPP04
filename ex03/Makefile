@@ -9,7 +9,7 @@ SRCS_FILES = \
 	Ice.cpp \
 	Cure.cpp \
 	Character.cpp \
-	MateriaSoure.cpp \
+	MateriaSource.cpp \
 
 OBJS = $(SRCS_FILES:.cpp=.o)
 
