@@ -6,8 +6,36 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 13:41:51 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/14 13:46:50 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/14 15:40:46 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+
+AMateria::AMateria() : _type("Undefined materia") {}
+
+AMateria::~AMateria() {}
+
+AMateria::AMateria(const AMateria & toCopy)
+{
+	*this = toCopy;
+}
+
+AMateria & AMateria::operator=(const AMateria & other)
+{
+	if (this != &other)
+		this->_type = other._type;
+	return (*this);
+}
+
+AMateria::AMateria(std::string const & type) : _type(type) {}
+
+std::string const & AMateria::getType() const
+{
+	return (this->_type);
+}
+
+void AMateria::use(ICharacter & target)
+{
+	std::cout << target.getName() << " has nothing to use here." << std::endl;
+}

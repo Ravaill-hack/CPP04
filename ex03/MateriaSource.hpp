@@ -11,7 +11,7 @@ class MateriaSource : public IMateriaSource
 {
 	public:
 		MateriaSource();
-		~MateriaSource();
+		virtual ~MateriaSource();
 		MateriaSource(const MateriaSource & toCopy);
 		MateriaSource & operator=(const MateriaSource & other);
 

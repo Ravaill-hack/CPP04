@@ -6,13 +6,13 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 13:42:01 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/14 14:28:44 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/14 15:14:47 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice()
+Ice::Ice() : AMateria()
 {
 	
 }
@@ -22,7 +22,7 @@ Ice::~Ice()
 	
 }
 
-Ice::Ice(const Ice & toCopy)
+Ice::Ice(const Ice & toCopy) : AMateria(toCopy)
 {
 	
 }

@@ -6,8 +6,9 @@
 # include <iomanip>
 # include <string>
 # include "ICharacter.hpp"
+# include "AMateria.hpp"
 
-class Character : public ICharacter
+class Character : virtual public ICharacter
 {
 	public:
 		Character();
@@ -24,6 +25,7 @@ class Character : public ICharacter
 
 	private:
 		std::string	_name;
+		AMateria	*_inventory[4];
 
 };
 

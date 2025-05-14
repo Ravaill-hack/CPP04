@@ -10,7 +10,8 @@
 class AMateria
 {
 	protected :
-
+		std::string	_type;
+	
 	public :
 		AMateria();
 		virtual ~AMateria();
