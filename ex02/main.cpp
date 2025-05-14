@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 15:47:39 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/14 11:38:02 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:59:17 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@
 
 int	main(void)
 {
-	const AAnimal* i = new Cat();
-	const AAnimal* j = new Dog();
-
-	delete j;//should not create a leak
-	delete i;
-
+	//AAnimal k; // n marche pas c'est normal la classe est abstraite
+	Dog Woufie;
+	
+	Woufie.makeSound();
 	return (0);
 }

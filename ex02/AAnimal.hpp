@@ -1,10 +1,11 @@
 
-#ifndef AANIMAL_HPP
-# define AANIMAL_HPP
+#ifndef AAnimal_HPP
+# define AAnimal_HPP
 
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include "Brain.hpp"
 
 class AAnimal
 {
@@ -16,7 +17,7 @@ class AAnimal
 
 		AAnimal(std::string type);
 
-		virtual void	makeSound() const;
+		virtual void	makeSound() const = 0;
 
 	protected:
 		std::string		_type;
