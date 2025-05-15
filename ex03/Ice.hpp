@@ -15,12 +15,9 @@ class Ice : virtual public AMateria
 		Ice(const Ice & toCopy);
 		Ice & operator=(const Ice & other);
 
-		Ice(std::string const & type);
-
-		std::string const & getType() const;
-
+		void use(ICharacter & target);
 		Ice* clone() const;
-		void use(Ice & target);
+
 	private:
 
 };

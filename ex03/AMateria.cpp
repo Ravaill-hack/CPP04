@@ -6,7 +6,7 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 13:41:51 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/14 15:40:46 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/15 09:20:10 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ std::string const & AMateria::getType() const
 
 void AMateria::use(ICharacter & target)
 {
-	std::cout << target.getName() << " has nothing to use here." << std::endl;
+	std::cout << " use nothing against " << target.getName() << " (undefined materia's type) " << std::endl;
 }

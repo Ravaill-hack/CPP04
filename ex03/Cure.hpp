@@ -15,12 +15,8 @@ class Cure : virtual public AMateria
 		Cure(const Cure & toCopy);
 		Cure & operator=(const Cure & other);
 
-		Cure(std::string const & type);
-
-		std::string const & getType() const;
-
+		void use(ICharacter & target);
 		Cure* clone() const;
-		void use(Cure & target);
 
 	private:
 

@@ -6,15 +6,33 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 13:42:06 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/14 15:26:11 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/15 09:42:16 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character(){}
+Character::Character() : _name("Undefined name")
+{
+	int	i = 0;
 
-Character::~Character(){}
+	while (i < 4)
+	{
+		_inventory[i] = NULL;
+		i++;
+	}
+}
+
+Character::~Character()
+{
+	int	i = 0;
+
+	while (i < 4)
+	{
+		delete _inventory[i];
+		i++;
+	}
+}
 
 Character::Character(const Character & toCopy)
 {
@@ -31,7 +49,16 @@ Character & Character::operator=(const Character & other)
 	return (*this);
 }
 	
-Character::Character(std::string name) : _name(name){}
+Character::Character(const std::string name) : _name(name)
+{
+	int	i = 0;
+
+	while (i < 4)
+	{
+		_inventory[i] = NULL;
+		i++;
+	}
+}
 
 std::string const & Character::getName() const
 {
@@ -40,18 +67,34 @@ std::string const & Character::getName() const
 
 void Character::equip(AMateria* m)
 {
-	while()
+	int	i = 0;
+
+	if (m == NULL)
+		return;
+	while (i < 4)
 	{
-		
+		if (_inventory[i] == NULL)
+		{
+			_inventory[i] = m;
+			return;
+		}
+		i++;
 	}
+	std::cout << "You can't equip cause inventory is already full" << std::endl;
 }
 
 void Character::unequip(int idx)
 {
-	
+	if (idx >= 0 && idx < 4 && _inventory[idx])
+		_inventory[idx] = NULL;
+	else
+		std::cout << "Incorrect inventory index, should be between 0 and 3" << std::endl;
 }
 
 void Character::use(int idx, ICharacter & target)
 {
-	std::cout << target.getName() << " use " << target. << std::endl;
+	if (idx >= 0 && idx < 4 && _inventory[idx])
+		_inventory[idx]->use(target);
+	else
+		std::cout << "Incorrect inventory index, should be between 0 and 3" << std::endl;
 }
