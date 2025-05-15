@@ -7,7 +7,7 @@
 # include <string>
 # include "AMateria.hpp"
 
-class Ice : virtual public AMateria
+class Ice : /*virtual*/ public AMateria
 {
 	public:
 		Ice();

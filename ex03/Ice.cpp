@@ -6,13 +6,13 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 13:42:01 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/15 09:18:17 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/15 10:19:27 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice() : AMateria("Ice") {}
+Ice::Ice() : AMateria("ice") {}
 
 Ice::~Ice(){}
 
@@ -32,7 +32,7 @@ Ice & Ice::operator=(const Ice & other)
 
 void Ice::use(ICharacter & target)
 {
-	std::cout << "* shoots an ice bolt at  " << target.getName() << std::endl;
+	std::cout << "* shoots an ice bolt at " << target.getName() << std::endl;
 }
 
 Ice* Ice::clone() const

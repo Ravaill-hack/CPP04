@@ -6,13 +6,13 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 13:41:55 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/15 09:17:44 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/15 10:16:52 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure() : AMateria("Cure") {}
+Cure::Cure() : AMateria("cure") {}
 
 Cure::~Cure(){}
 

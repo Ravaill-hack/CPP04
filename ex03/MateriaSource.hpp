@@ -15,8 +15,12 @@ class MateriaSource : public IMateriaSource
 		MateriaSource(const MateriaSource & toCopy);
 		MateriaSource & operator=(const MateriaSource & other);
 
-		void learnMateria(AMateria*);
-		AMateria* createMateria(std::string const & type);	
+		void learnMateria(AMateria* m);
+		AMateria* createMateria(std::string const & type);
+	
+	private:
+		AMateria*	_materiaBook[4];
+
 };
 
 #endif

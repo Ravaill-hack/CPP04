@@ -8,7 +8,7 @@
 # include "ICharacter.hpp"
 # include "AMateria.hpp"
 
-class Character : virtual public ICharacter
+class Character : /*virtual*/ public ICharacter
 {
 	public:
 		Character();
