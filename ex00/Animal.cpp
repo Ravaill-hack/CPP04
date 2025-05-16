@@ -6,13 +6,13 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 15:48:24 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/13 16:25:53 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/16 10:10:52 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal() : _type("_default")
+Animal::Animal() : _type("default")
 {
 	std::cout << "Animal default constructor called" << std::endl;	
 }
@@ -46,4 +46,9 @@ Animal::Animal(std::string type) : _type(type)
 void	Animal::makeSound() const
 {
 	std::cout << _type << " : generic animal noise" << std::endl;
+}
+
+std::string		Animal::getType() const
+{
+	return (_type);
 }

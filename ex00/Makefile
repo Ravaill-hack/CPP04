@@ -8,6 +8,9 @@ SRCS_FILES = \
 	Animal.cpp \
 	Dog.cpp \
 	Cat.cpp \
+	WrongAnimal.cpp \
+	WrongDog.cpp \
+	WrongCat.cpp \
 
 OBJS = $(SRCS_FILES:.cpp=.o)
 

@@ -6,25 +6,40 @@
 /*   By: lmatkows <lmatkows@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 15:47:39 by lmatkows          #+#    #+#             */
-/*   Updated: 2025/05/13 16:25:19 by lmatkows         ###   ########.fr       */
+/*   Updated: 2025/05/16 10:12:23 by lmatkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongCat.hpp"
+#include "WrongDog.hpp"
 
+
+// int	main(void)
+// {
+// 	const Animal* meta = new Animal();
+// 	const Animal* j = new Dog();
+// 	const Animal* i = new Cat();
+// 	std::cout << j->getType() << " " << std::endl;
+// 	std::cout << i->getType() << " " << std::endl;
+// 	i->makeSound(); //will output the cat sound!
+// 	j->makeSound();
+// 	meta->makeSound();
+
+// 	return (0);
+// }
 
 int	main(void)
 {
-	Animal	random_animal;
-	Animal	wrong_cat("Cat");
-	Animal	wrong_dog("Dog");
-	Cat		true_cat;
-	Dog		true_dog;
+	const WrongAnimal* meta = new WrongAnimal();
+	const WrongAnimal* j = new WrongDog();
+	const WrongAnimal* i = new WrongCat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound(); //will output the cat sound!
+	j->makeSound();
+	meta->makeSound();
 
-	random_animal.makeSound();
-	wrong_cat.makeSound();
-	wrong_dog.makeSound();
-	true_cat.makeSound();
-	true_dog.makeSound();
+	return (0);
 }
